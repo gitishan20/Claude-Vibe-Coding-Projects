@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>Gitishan Biswal - Minimal Portfolio</title>
+    <meta name="description" content="Gitishan Biswal - Software Engineer & Full Stack Developer. Minimal, elegant portfolio showcasing projects and technical expertise.">
+    
+    <!-- Professional Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Ambient floating orbs -->
+    <div class="ambient-orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-content">
+            <!-- Anime-style Loading Animation -->
+            <div class="anime-loader">
+                <div class="rotating-rings">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                </div>
+                <div class="pulsing-core">
+                    <div class="core-text">G</div>
+                    <div class="pulse-wave"></div>
+                    <div class="pulse-wave pulse-delay-1"></div>
+                    <div class="pulse-wave pulse-delay-2"></div>
+                </div>
+                <div class="floating-particles">
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                </div>
+            </div>
+            <div class="loading-text">INITIALIZING PORTFOLIO</div>
+            <div class="loading-progress">
+                <div class="loading-bar"></div>
+                <div class="loading-percentage">0%</div>
+            </div>
+            <div class="loading-status">Loading assets...</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#home">G.</a>
+            </div>
+            <ul class="nav-menu-visible" id="nav-menu-visible">
+                <li><a href="#about" class="nav-link-visible">About</a></li>
+                <li><a href="#skills" class="nav-link-visible">Skills</a></li>
+                <li><a href="#experience" class="nav-link-visible">Experience</a></li>
+                <li><a href="#certifications" class="nav-link-visible">Certifications</a></li>
+            </ul>
+            <div class="nav-right">
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#projects" class="nav-link">Work</a></li>
+                    <li><a href="#leadership" class="nav-link">Leadership</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="nav-overlay" id="nav-overlay"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-greeting">Hello, I'm</div>
+                <h1 class="hero-name">
+                    <span class="name-text">Gitishan Biswal</span>
+                </h1>
+                <div class="hero-title">
+                    <span class="typing-text" id="typing-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Crafting elegant digital solutions through clean code and thoughtful design. 
+                    Passionate about creating experiences that matter.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-shape">
+                    <img src="MYPIC.jpeg" alt="Ghibli Character" class="ghibli-image">
+                </div>
+                <div class="floating-elements">
+                    <div class="floating-element" style="--delay: 0s"></div>
+                    <div class="floating-element" style="--delay: 1s"></div>
+                    <div class="floating-element" style="--delay: 2s"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <span class="sec-watermark">ABOUT</span>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-intro">
+                        <h3>Passionate Developer & Problem Solver</h3>
+                        <p>
+                            I'm a Computer Science student at KIIT University with a passion for creating 
+                            innovative digital solutions. My journey in technology spans full-stack development, 
+                            machine learning, and data analytics.
+                        </p>
+                        <p>
+                            I believe in the power of clean, efficient code and user-centric design. 
+                            Every project is an opportunity to learn, grow, and create something meaningful 
+                            that makes a difference.
+                        </p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Years Learning</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                    </div>
+                    <div class="about-actions">
+                        <a href="#contact" class="btn btn-outline">Let's Connect</a>
+                        <a href="Resume Gitishan.pdf" class="btn btn-text" id="download-resume" download="Gitishan_Biswal_Resume.pdf" target="_blank">
+                            <i class="fas fa-download"></i>
+                             Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section with Horizontal Moving Icons -->
+    <section id="skills" class="skills">
+        <span class="sec-watermark">SKILLS</span>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Expertise</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Technologies I work with to bring ideas to life</p>
+            </div>
+        </div>
+        
+        <!-- Horizontal Moving Skills -->
+        <div class="skills-showcase">
+            <div class="skills-container">
+                <div class="skills-track" id="skills-track">
+                    <div class="skill-item" style="--skill-color:55,118,171"><i class="fab fa-python"></i><span>Python</span></div>
+                    <div class="skill-item" style="--skill-color:247,223,30"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                    <div class="skill-item" style="--skill-color:237,139,0"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                    <div class="skill-item" style="--skill-color:227,79,38"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+                    <div class="skill-item" style="--skill-color:38,77,228"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+                    <div class="skill-item" style="--skill-color:97,218,251"><i class="devicon-react-original colored"></i><span>React</span></div>
+                    <div class="skill-item" style="--skill-color:51,103,145"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+                    <div class="skill-item" style="--skill-color:68,121,161"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                    <div class="skill-item" style="--skill-color:248,80,0"><i class="devicon-oracle-original colored"></i><span>Oracle</span></div>
+                    <div class="skill-item" style="--skill-color:66,133,244"><i class="devicon-googlecloud-plain colored"></i><span>Google Cloud</span></div>
+                    <div class="skill-item" style="--skill-color:240,80,50"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                    <div class="skill-item" style="--skill-color:0,122,204"><i class="devicon-vscode-plain colored"></i><span>VS Code</span></div>
+                    <div class="skill-item" style="--skill-color:242,78,30"><i class="fab fa-figma" style="color:#f24e1e;"></i><span>Figma</span></div>
+                    <div class="skill-item" style="--skill-color:120,90,200"><i class="devicon-pandas-original colored"></i><span>Pandas</span></div>
+                    <div class="skill-item" style="--skill-color:77,119,207"><i class="devicon-numpy-original colored"></i><span>NumPy</span></div>
+                    <div class="skill-item" style="--skill-color:255,111,0"><i class="devicon-tensorflow-original colored"></i><span>TensorFlow</span></div>
+                    <div class="skill-item" style="--skill-color:200,200,200"><i class="fab fa-github"></i><span>GitHub</span></div>
+                    <div class="skill-item" style="--skill-color:240,120,0"><i class="devicon-jupyter-plain colored"></i><span>Jupyter</span></div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <span class="sec-watermark">WORK</span>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Work</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">A showcase of projects that define my journey</p>
+            </div>
+
+            <div class="projects-mosaic">
+
+                <!-- Card 1: Stock Market Prediction -->
+                <div class="proj-card" data-cat="ml" data-aos="fade-up" data-aos-delay="100">
+                    <div class="proj-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80"
+                             alt="Stock Market Prediction" class="proj-img">
+                    </div>
+                    <span class="proj-num">01</span>
+                    <span class="proj-cat-tag">Machine Learning</span>
+                    <div class="proj-overlay">
+                        <div class="proj-content">
+                            <h3 class="proj-title">Stock Market Prediction</h3>
+                            <div class="proj-details">
+                                <p class="proj-desc">AI-powered system using CNN, LSTM, and Random Forest algorithms to predict stock market trends with 90%+ accuracy.</p>
+                                <div class="proj-tags">
+                                    <span>Python</span><span>TensorFlow</span><span>Pandas</span><span>Scikit-learn</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Gemini AI Clone -->
+                <div class="proj-card" data-cat="web" data-aos="fade-up" data-aos-delay="200">
+                    <div class="proj-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1676299081847-824916de030a?auto=format&fit=crop&w=800&q=80"
+                             alt="Gemini AI Clone" class="proj-img">
+                    </div>
+                    <span class="proj-num">02</span>
+                    <span class="proj-cat-tag">Web Application</span>
+                    <div class="proj-overlay">
+                        <div class="proj-content">
+                            <h3 class="proj-title">Gemini AI Clone</h3>
+                            <div class="proj-details">
+                                <p class="proj-desc">Full-stack web application replicating Google Gemini AI with real-time responses and modern UI design.</p>
+                                <div class="proj-tags">
+                                    <span>React</span><span>Node.js</span><span>API Integration</span><span>CSS3</span>
+                                </div>
+                                <div class="proj-actions">
+                                    <a href="#" class="proj-cta">View Project <i class="fas fa-arrow-right"></i></a>
+                                    <a href="#" class="proj-gh"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="projects-action">
+                <a href="#" class="btn btn-outline">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <span class="sec-watermark">XP</span>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">My professional work journey and career growth</p>
+            </div>
+            <div class="tl-container">
+                <div class="tl-item tl-current" data-aos="fade-left" data-aos-delay="100">
+                    <div class="tl-icon-wrap">
+                        <div class="tl-dot"><i class="fas fa-laptop-code"></i></div>
+                    </div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <span class="tl-date"><i class="far fa-calendar-alt"></i> June 2025 – Present</span>
+                            <span class="tl-badge tl-badge-current">Current</span>
+                        </div>
+                        <h3 class="tl-role">Programmer Analyst Trainee</h3>
+                        <div class="tl-company"><span class="tl-company-dot"></span>Cognizant</div>
+                        <p class="tl-desc">Currently working as a Programmer Analyst Trainee, developing software solutions and gaining hands-on experience in enterprise-level application development. Contributing to various client projects and learning industry best practices.</p>
+                        <div class="tl-tags">
+                            <span>Software Development</span>
+                            <span>Enterprise Applications</span>
+                            <span>Problem Solving</span>
+                            <span>Client Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tl-item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="tl-icon-wrap">
+                        <div class="tl-dot"><i class="fas fa-chart-line"></i></div>
+                    </div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <span class="tl-date"><i class="far fa-calendar-alt"></i> May 2024 – June 2024</span>
+                            <span class="tl-badge tl-badge-past">Internship</span>
+                        </div>
+                        <h3 class="tl-role">Sales &amp; Marketing Intern</h3>
+                        <div class="tl-company"><span class="tl-company-dot"></span>High Radius</div>
+                        <p class="tl-desc">Assisted in developing marketing strategies that enhanced brand visibility and engagement. Created targeted promotional materials using analytics to identify key audience preferences.</p>
+                        <div class="tl-tags">
+                            <span>Marketing Strategy</span>
+                            <span>Data Analytics</span>
+                            <span>Lead Generation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="leadership">
+        <span class="sec-watermark">LEAD</span>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Leadership & Community</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Leading teams and contributing to tech communities</p>
+            </div>
+            <div class="tl-container">
+                <div class="tl-item" data-aos="fade-left" data-aos-delay="100">
+                    <div class="tl-icon-wrap">
+                        <div class="tl-dot"><i class="fas fa-users"></i></div>
+                    </div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <span class="tl-date"><i class="far fa-calendar-alt"></i> June 2022 – Sept 2024</span>
+                            <span class="tl-badge tl-badge-past">Past</span>
+                        </div>
+                        <h3 class="tl-role">Video Editing Team Lead</h3>
+                        <div class="tl-company"><span class="tl-company-dot"></span>Google Developers Student Club (GDSC)</div>
+                        <p class="tl-desc">Led the video editing team and collaborated with marketing to create high-quality content. Managed weekly technical events and boosted social media engagement significantly. Mentored junior team members and coordinated cross-functional projects.</p>
+                        <div class="tl-tags">
+                            <span>Team Leadership</span>
+                            <span>Content Creation</span>
+                            <span>Event Management</span>
+                            <span>Community Building</span>
+                            <span>Mentoring</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <span class="sec-watermark">EDU</span>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">My academic journey and achievements</p>
+            </div>
+            <div class="tl-container">
+                <div class="tl-item" data-aos="fade-left" data-aos-delay="100">
+                    <div class="tl-icon-wrap">
+                        <div class="tl-dot"><i class="fas fa-graduation-cap"></i></div>
+                    </div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <span class="tl-date"><i class="far fa-calendar-alt"></i> Sept 2021 – May 2025</span>
+                            <span class="tl-badge tl-badge-past">B.Tech</span>
+                        </div>
+                        <h3 class="tl-role">Bachelor of Technology</h3>
+                        <div class="tl-company"><span class="tl-company-dot"></span>Kalinga Institute of Industrial Technology (KIIT)</div>
+                        <p class="tl-desc">Computer Science and Engineering — Focused on software development, machine learning, and data analytics. Completed comprehensive coursework in algorithms, data structures, web development, and artificial intelligence.</p>
+                        <div class="tl-tags">
+                            <span>Computer Science</span>
+                            <span>Machine Learning</span>
+                            <span>Data Structures</span>
+                            <span>Web Development</span>
+                            <span>Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tl-item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="tl-icon-wrap">
+                        <div class="tl-dot"><i class="fas fa-school"></i></div>
+                    </div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <span class="tl-date"><i class="far fa-calendar-alt"></i> 2009 – 2021</span>
+                            <span class="tl-badge tl-badge-past">High School</span>
+                        </div>
+                        <h3 class="tl-role">Delhi Public School</h3>
+                        <div class="tl-company"><span class="tl-company-dot"></span>Science Stream (PCM + Biology)</div>
+                        <div class="tl-tags">
+                            <span>Mathematics</span>
+                            <span>Physics</span>
+                            <span>Chemistry</span>
+                            <span>Biology</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <span class="sec-watermark">CERTS</span>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Professional certifications and verified achievements</p>
+            </div>
+            <div class="cert-grid">
+
+                <!-- Oracle AI -->
+                <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=88D05980A489FEA85B6C6601B84D24E328918CD828034BFFCBDE2A02115056D2"
+                   target="_blank" class="cert-card cert-oracle-ai" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cert-top-bar"></div>
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-check-circle"></i> Verified
+                        </div>
+                    </div>
+                    <div class="cert-body">
+                        <div class="cert-org">Oracle</div>
+                        <h3 class="cert-title">Oracle Fusion AI Agent Studio Certified Developer Professional</h3>
+                    </div>
+                    <div class="cert-footer">
+                        <span class="cert-type">AI &amp; Developer</span>
+                        <span class="cert-link">View Badge <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+
+                <!-- Oracle HCM -->
+                <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=16E346C257FAFE52A88E7E89DA78E02DF7CAEB1C061C679459AD84F91E8AEB3B"
+                   target="_blank" class="cert-card cert-oracle-hcm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cert-top-bar"></div>
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-check-circle"></i> Verified
+                        </div>
+                    </div>
+                    <div class="cert-body">
+                        <div class="cert-org">Oracle</div>
+                        <h3 class="cert-title">Oracle Fusion Cloud Applications HCM Process Essentials</h3>
+                    </div>
+                    <div class="cert-footer">
+                        <span class="cert-type">Cloud HCM</span>
+                        <span class="cert-link">View Badge <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+
+                <!-- Google Cloud -->
+                <a href="https://www.credly.com/badges/e0c38b96-6900-4d09-abd5-ed1088583559"
+                   target="_blank" class="cert-card cert-google" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cert-top-bar"></div>
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="devicon-googlecloud-plain"></i>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-check-circle"></i> Verified
+                        </div>
+                    </div>
+                    <div class="cert-body">
+                        <div class="cert-org">Google Cloud</div>
+                        <h3 class="cert-title">Google Cloud Computing Foundation</h3>
+                    </div>
+                    <div class="cert-footer">
+                        <span class="cert-type">Cloud Computing</span>
+                        <span class="cert-link">View Badge <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+
+                <!-- Data Analytics -->
+                <a href="https://drive.google.com/file/d/1mq1tZT_2UImgZaJsSXv6NYABBSw_WfKq/view"
+                   target="_blank" class="cert-card cert-analytics" data-aos="fade-up" data-aos-delay="400">
+                    <div class="cert-top-bar"></div>
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-check-circle"></i> Verified
+                        </div>
+                    </div>
+                    <div class="cert-body">
+                        <div class="cert-org">Data Science</div>
+                        <h3 class="cert-title">Data Analytics and Visualization</h3>
+                    </div>
+                    <div class="cert-footer">
+                        <span class="cert-type">Analytics &amp; Viz</span>
+                        <span class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Ready to bring your ideas to life? Let's start a conversation.</p>
+            </div>
+            
+            <div class="contact-content-wrapper">
+                <!-- Email Bar -->
+                <div class="email-bar" data-aos="fade-up" data-aos-delay="100">
+                    <div class="email-bar-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="email-bar-content">
+                        <span class="email-bar-label">Get in touch</span>
+                        <a href="mailto:gitishan@yahoo.com" class="email-bar-link">gitishan@yahoo.com</a>
+                    </div>
+                    <div class="email-bar-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Gitishan Biswal. Crafted with passion and precision.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/gitishan/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:gitishan@yahoo.com" class="social-link" aria-label="Email" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
