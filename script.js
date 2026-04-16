@@ -721,75 +721,33 @@ window.addEventListener('scroll', () => {
     scrollProgressBar.style.width = progress + '%';
 }, { passive: true });
 
-// ===== CURSOR GLOW =====
-const cursorGlow = document.createElement('div');
-cursorGlow.className = 'cursor-glow';
-document.body.appendChild(cursorGlow);
-
-// ===== CUSTOM CURSOR =====
-const cursorDot  = document.createElement('div');
-const cursorRing = document.createElement('div');
-cursorDot.className  = 'cursor-dot';
-cursorRing.className = 'cursor-ring';
-document.body.appendChild(cursorDot);
-document.body.appendChild(cursorRing);
-
-let mouseX = 0, mouseY = 0;
-let ringX  = 0, ringY  = 0;
-let rafId  = null;
-
-function animateRing() {
-    // Ring follows with smooth lag
-    ringX += (mouseX - ringX) * 0.14;
-    ringY += (mouseY - ringY) * 0.14;
-    cursorRing.style.left = ringX + 'px';
-    cursorRing.style.top  = ringY + 'px';
-    rafId = requestAnimationFrame(animateRing);
-}
-animateRing();
+// ===== CURSOR CIRCLE =====
+const cursorCircle = document.createElement('div');
+cursorCircle.className = 'cursor-circle';
+document.body.appendChild(cursorCircle);
 
 document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-
-    // Dot snaps instantly
-    cursorDot.style.left = mouseX + 'px';
-    cursorDot.style.top  = mouseY + 'px';
-
-    // Ambient glow follows
-    cursorGlow.style.left    = mouseX + 'px';
-    cursorGlow.style.top     = mouseY + 'px';
-    cursorGlow.style.opacity = '1';
+    cursorCircle.style.left = e.clientX + 'px';
+    cursorCircle.style.top  = e.clientY + 'px';
 }, { passive: true });
 
 document.addEventListener('mouseleave', () => {
-    cursorGlow.style.opacity = '0';
-    cursorDot.style.opacity  = '0';
-    cursorRing.style.opacity = '0';
+    cursorCircle.style.opacity = '0';
 });
 
 document.addEventListener('mouseenter', () => {
-    cursorDot.style.opacity  = '1';
-    cursorRing.style.opacity = '1';
+    cursorCircle.style.opacity = '1';
 });
 
-// Scale ring on interactive elements
+// Grow circle on interactive elements
 const hoverTargets = 'a, button, .cert-card, .proj-card, .tl-card, .skill-tag, .nav-link, .cta-btn';
 
 document.querySelectorAll(hoverTargets).forEach(el => {
     el.addEventListener('mouseenter', () => {
-        cursorRing.style.width        = '48px';
-        cursorRing.style.height       = '48px';
-        cursorRing.style.borderColor  = 'rgba(139, 92, 246, 0.9)';
-        cursorRing.style.background   = 'rgba(139, 92, 246, 0.08)';
-        cursorDot.style.transform     = 'translate(-50%, -50%) scale(0.4)';
+        cursorCircle.classList.add('hovering');
     });
     el.addEventListener('mouseleave', () => {
-        cursorRing.style.width        = '32px';
-        cursorRing.style.height       = '32px';
-        cursorRing.style.borderColor  = 'rgba(139, 92, 246, 0.6)';
-        cursorRing.style.background   = 'rgba(139, 92, 246, 0.04)';
-        cursorDot.style.transform     = 'translate(-50%, -50%) scale(1)';
+        cursorCircle.classList.remove('hovering');
     });
 });
 
@@ -818,4 +776,6 @@ document.querySelectorAll(
 
 console.log('🎨 Minimal Aesthetic Portfolio initialized successfully!');
 console.log('✨ Ready to showcase amazing work!');
-console.log('🚀 Performance optimized and accessible!'); 
+console.log('🚀 Performance optimized and accessible!');
+
+ 
